@@ -34,7 +34,8 @@
 					
 					<p class="post-date"><?php the_time(get_option('date_format')); ?></p>
 					
-					<h1 class="post-title"><?php the_title(); ?></h1>
+					<h1 class="post-title"></h1>
+
 					
 				</div>
 				
@@ -43,8 +44,10 @@
 				    <div class="post-content">
 				    
 				    	<?php the_content(); ?>
+				    	<?php the_meta(); ?>
 				    
 				    </div> <!-- /post-content -->
+
 				    
 				    <div class="clear"></div>
 				    
