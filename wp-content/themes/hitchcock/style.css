@@ -943,7 +943,7 @@ input[type="button"],
 	position: relative;
 }
 
-.post-content a { color: #3bc492; }
+.post-content a {color: #3bc492;}
 .post-content a:hover { text-decoration: underline; }
 
 
@@ -960,7 +960,7 @@ input[type="button"],
 }
 
 .post-content > *:first-child { margin-top: 0; }
-.post-content *:last-child { margin-bottom: 0; }
+.post-content *:last-child {margin-bottom: 0;}
 
 .post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6 { 
 	margin: 50px 0 25px; 
@@ -1083,8 +1083,7 @@ code, kbd, pre {
 
 
 .post-content ul {
-	list-style: disc;
-	margin-left: 1.5em;
+	/* list-style: disc; */
 }
 
 .post-content ul ul { list-style: circle; }

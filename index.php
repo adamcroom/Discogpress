@@ -15,3 +15,12 @@ define('WP_USE_THEMES', true);
 
 /** Loads the WordPress Environment and Template */
 require( dirname( __FILE__ ) . '/wp-blog-header.php' );
+
+if( is_home() ){
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+query_posts( array('post_type'=>array(
+'records'
+),'paged'=>$paged ) );
+}
+?>
+

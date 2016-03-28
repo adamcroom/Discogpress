@@ -495,4 +495,12 @@ add_action( 'wp_head' , array( 'hitchcock_Customize' , 'hitchcock_header_output'
 // Enqueue live preview javascript in Theme Customizer admin screen
 add_action( 'customize_preview_init' , array( 'hitchcock_Customize' , 'hitchcock_live_preview' ) );
 
+// Added to allow home page to display custom post type
+ add_filter( 'pre_get_posts', 'my_get_posts' );
+function my_get_posts( $query ) {
+if ( is_home() && false == $query->query_vars['suppress_filters'] )
+$query->set( 'post_type', array(
+'records' ) );
+    return $query;
+ }  
 ?>
